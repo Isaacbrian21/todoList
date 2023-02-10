@@ -58,4 +58,25 @@
         }
     }
 }
+@media (max-width: 840px) {
+    .todo-main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 400px;
+    width: 350px;
+    border-radius: 7px;
+    }
+}
 
+
+@media (max-width: 370px) {
+    .todo-main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 400px;
+    width: 200px;
+    border-radius: 7px;
+    }
+}

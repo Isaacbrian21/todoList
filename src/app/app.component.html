@@ -14,7 +14,7 @@
 
   <header class="main__initial">
     <ul class="main__initial__unList">
-      <li z>TODO LIST</li>
+      <li>TODO LIST</li>
       <li class="date">{{date | date: 'shortTime'}}</li>
     </ul>
   </header>
@@ -30,8 +30,9 @@
 
 
   <div class="main__components">
-    <app-done-list class="main__components__ListaDone" [todoList]="todos" (emitTodos)="updateTodos($event)"></app-done-list>
-    <app-undone-list class="main__components__ListaUndone" [todoList]="todos"></app-undone-list>
+    <app-done-list class="main__components__listDone" [todoList]="todos" (emitTodos)="updateTodos($event)"></app-done-list>
+    <br>
+    <app-undone-list class="main__components__listUndone" [todoList]="todos"></app-undone-list>
   </div>
 
 </body>
