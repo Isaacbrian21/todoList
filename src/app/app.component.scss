@@ -30,7 +30,7 @@
 
 
         &__entrada {
-            width: 40%;
+            width: 400px;
             border: transparent;
             text-align: left;
             margin: 10px;
@@ -105,14 +105,21 @@
 
 
         }
+        &__input-text {
+            width: 100%;
+            display: flex;
+            justify-content: center;
 
-        input {
-            width: 60%;
-            line-height: 25px;
-            text-indent: 10px;
-            font-size: 1.2em;
-        }
-        
+        &__entrada{
+
+            input {
+                width: 70%;
+                line-height: 25px;
+                text-indent: 10px;
+                font-size: 1.2em;
+            }
+        }    
+    }
         li {
             color: white;
             list-style: none;
