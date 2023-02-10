@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Oleo+Script+Swash+Caps&family=Playfair+Display:ital,wght@1,600&family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Oleo+Script+Swash+Caps&family=Playfair+Display:ital,wght@1,600&family=Poppins:ital,wght@1,200&display=swap');
+
+
+.todo-main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 600px;
+    width: 400px;
+    border-radius: 7px;
+    
+    &__title{
+        font-family: 'Kourean' cursive;
+        font-size: 2em;
+        text-align: center;
+        color: #fff;
+        background: black;
+        border-radius: 7px 7px  0 0;
+    }
+    &__todos {
+
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &__task {
+            justify-content: space-around;
+            text-align: left;
+            list-style: none;
+            padding: 15px;
+            margin: 10px;
+            font-size: 1em;
+            font-style: italic;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+            &__btn {
+                background: transparent;
+                color: red;
+                border-radius: 3em;
+                border: none;
+                float: right;
+                opacity: 0.6;
+                transition: opacity 1s;
+                cursor: pointer;
+              
+            }
+            &__btn:hover {
+                opacity: 1;
+                transition: opacity 1s;
+            
+            }
+
+        
+
+        }
+    }
+}
+

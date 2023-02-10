@@ -1,10 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<header>
-  <li> <a routerLinkActive="active" routerLink="/home">Home</a></li>
-  <li> <a routerLinkActive="active" routerLink="/trash">Trash</a></li>
-  <li> <a routerLinkActive="active" routerLink="/#">About</a></li>
-</header>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
 
-<router-outlet></router-outlet>
+<body class="main">
 
 
+  <header class="main__initial">
+    <ul class="main__initial__unList">
+      <li z>TODO LIST</li>
+      <li class="date">{{date | date: 'shortTime'}}</li>
+    </ul>
+  </header>
+
+  <section class="main__input-text">
+    <div  class="main__input-text__entrada">
+      <input type="text" #todoName (keydown.enter)="addTodo(todoName.value)"
+        placeholder="Digite uma tarefa" [(ngModel)]="clearInput">
+      <button class="main__input-text__entrada__add" mat-mini-fab (click)="addTodo(todoName.value)"> <mat-icon class="ButA">add_task</mat-icon>
+      </button>
+    </div>
+  </section>
+
+
+  <div class="main__components">
+    <app-done-list class="main__components__ListaDone" [todoList]="todos" (emitTodos)="updateTodos($event)"></app-done-list>
+    <app-undone-list class="main__components__ListaUndone" [todoList]="todos"></app-undone-list>
+  </div>
+
+</body>
+
+</html>

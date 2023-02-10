@@ -1,27 +1,75 @@
-header {
-    height: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background: blue;
-    text-decoration: none;
-    list-style: none;
-    align-items: center;
-    text-align: center;
-    
-}
-li{
+.main {
+    background-image: url(../assets/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-}
+    &__initial {
+        height: 6vh;
+        display: flex;
+        background-color: rgb(15, 15, 15);
+        justify-content: center;
+        box-shadow: 0 0 1rem black;
 
-header li a {
-    text-align: center;
-    color: white;
-    text-decoration: none;
-}
+        &__unList {
+            display: flex;
+            margin: 11px;
 
-header li .active {
-    color: blue;
-    background: white;
-    border-radius: 4px;
+            li {
+                color: white;
+                list-style: none;
+                margin-left: 2rem;
+                font-size: xx-large;
+            }
+        }
+    }
+
+    &__input-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+
+        &__entrada {
+            width: 40%;
+            border: transparent;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+
+            input {
+                width: 80%;
+                line-height: 25px;
+                text-indent: 10px;
+                font-size: 1.2em;
+            }
+
+            &__add {
+                background: green;
+                border-radius: 3em;
+                border: none;
+                float: right;
+                opacity: 0.6;
+                transition: opacity 1s;
+                cursor: pointer;
+                color: white;
+            }
+
+            &__add:hover {
+                opacity: 1;
+                transition: opacity 1s;
+            }
+        }
+
+    }
+
+
+
+    &__components {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
 }

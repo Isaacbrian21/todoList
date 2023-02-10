@@ -1,0 +1,15 @@
+<section class="todo-main">
+    <h1 class="todo-main__title">Todo List</h1>
+    <div class="todo-main__todos">
+        <div *ngFor="let todo of todoList">
+            <div *ngIf="!todo.done" >
+                <input type="checkbox" [(ngModel)]="todo.done">
+                <li class="todo-main__todos__task">
+                    {{todo.name }} <button class="todo-main__todos__task__btn" mat-mini-fab (click)="deleteTask(todo)"> 
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </li>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,39 +1,27 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DialogComponent } from './dialog/dialog.component';
+import { DoneListComponent } from './todo/done-list/done-list.component';
+import { UndoneListComponent } from './todo/undone-list/undone-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import  {MatDialogModule } from '@angular/material/dialog';
-import { EditComponent } from './dialog2/edit.component'
-import {ToastrModule} from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent,
-    EditComponent,
-    
-   
+    DoneListComponent,
+    UndoneListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDialogModule,
+    FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
-      timeOut: 3000,
-      progressBar: true,
-      closeButton: true,
-      preventDuplicates: true
-
-    }),
-    HttpClientModule
-
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
